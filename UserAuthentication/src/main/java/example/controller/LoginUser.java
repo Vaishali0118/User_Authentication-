@@ -41,7 +41,7 @@ public class LoginUser extends HttpServlet {
 		String password=request.getParameter("password");
 		
 		User u= new User();
-		if(password==u.getPassword()) {
+		if(password==u.getPassword() & email==u.getEmail()) {
 			RequestDispatcher rd=request.getRequestDispatcher("Welcomepage.jsp");
 			rd.forward(request, response);
 		}
